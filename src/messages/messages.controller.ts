@@ -4,13 +4,7 @@ import {MessagesService} from './messages.service'
 
 @Controller('messages')
 export class MessagesController {
-    messagesService:MessagesService
-
-    constructor(){
-        //Service is creating its own dependencie
-        // NOt the way to it
-        //use dependency injection
-        this.messagesService=new MessagesService();
+    constructor(public messagesService :MessagesService){
     }
     
     @Get()
@@ -36,5 +30,6 @@ export class MessagesController {
     }
 
 }
+//done a git config
 
 //Argument decorator 
